@@ -12,10 +12,10 @@ object tom {
     method energia() = energia
 
     method comer(raton) {
-        energia = 12 + raton.peso()
+        energia += 12 + raton.peso()
     }
     method correr(metros) {
-        energia = energia - (metros/2)
+        energia -= (metros/2)
     }
 
     method estaFeliz() = energia >= 50
@@ -24,10 +24,11 @@ object tom {
 }
 
 object jerry {
-    const edad = 2
+    var edad = 2
 
-    method cumplirAnios() = edad + 1
-
+    method cumplirAnios() {
+        edad += 1
+    }
     method peso() = edad * 20
 }
 
